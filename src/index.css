@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-900 text-gray-100 font-sans;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(88, 28, 135, 0.3) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, rgba(49, 46, 129, 0.3) 0, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(79, 70, 229, 0.3) 0, transparent 50%);
+  background-attachment: fixed;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg;
+  }
+  
+  .section-title {
+    @apply text-4xl font-extrabold mb-4 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-gray-300 mb-12 max-w-3xl mx-auto;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    @apply bg-gray-50 text-gray-800;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(219, 234, 254, 0.7) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, rgba(224, 231, 255, 0.7) 0, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(224, 242, 254, 0.7) 0, transparent 50%);
+  }
+  
+  .glass {
+    @apply bg-white/20 border-white/30;
+  }
+}
