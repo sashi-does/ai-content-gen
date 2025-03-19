@@ -50,7 +50,7 @@ function App() {
       >
         <nav className="container mx-auto px-6 flex justify-between items-center">
           <div className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-            AIContentGen
+            TubeX
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
